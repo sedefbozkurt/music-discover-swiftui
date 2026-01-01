@@ -12,17 +12,17 @@ struct MockMusicData {
         MusicSection(
             title: "Top Picks For You",
             tracks: [
-                Track(title: "Blinding Lights", artist: "The Weeknd", artworkName: "blinding_lights"),
-                Track(title: "Levitating", artist: "Dua Lipa", artworkName: "levitating"),
-                Track(title: "Blank Space", artist: "Taylor Swift", artworkName: "blank_space")
+                Track(title: "Fading Lights", artist: "Luna Vale", artworkName: "artwork_1"),
+                Track(title: "Neon Skies", artist: "Echo North", artworkName: "artwork_2"),
+                Track(title: "After Midnight", artist: "Nova Grey", artworkName: "artwork_3")
             ]
         ),
         MusicSection(
-            title: "Türkçe Rock",
+            title: "Chill Vibes",
             tracks: [
-                Track(title: "Haram Geceler", artist: "Cem Kısmet", artworkName: "haram_geceler"),
-                Track(title: "Aşk Dediğin", artist: "Majeste", artworkName: "ask_dedigin"),
-                Track(title: "Ay Tenli Kadın", artist: "Ufuk Beydemir", artworkName: "ay_tenli_kadin")
+                Track(title: "Soft Horizons", artist: "Aria Bloom", artworkName: "artwork_4"),
+                Track(title: "Drift Away", artist: "Low Tide", artworkName: "artwork_5"),
+                Track(title: "Silent Waves", artist: "Mono Lake", artworkName: "artwork_6")
             ]
         )
     ]
