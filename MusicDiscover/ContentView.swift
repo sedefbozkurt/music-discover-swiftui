@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        TrackCardView(
+            track: Track(
+                title: "Drift Away",
+                artist: "Low Tide",
+                artworkName: "artwork_5"
+            )
+        )
     }
 }
 
