@@ -11,4 +11,5 @@ struct Track: Identifiable {
     let id = UUID()
     let title: String
     let artist: String
+    let artworkName: String
 }
