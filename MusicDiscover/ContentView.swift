@@ -9,13 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TrackCardView(
-            track: Track(
-                title: "Drift Away",
-                artist: "Low Tide",
-                artworkName: "artwork_5"
-            )
-        )
+        DiscoverView()
     }
 }
 
