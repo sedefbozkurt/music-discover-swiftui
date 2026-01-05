@@ -10,6 +10,8 @@ import SwiftUI
 struct DiscoverView: View {
     let sections = MockMusicData.sections
     
+    @State private var selectedTrack: Track? = nil
+    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 23) {
@@ -23,11 +25,20 @@ struct DiscoverView: View {
                             LazyHStack(spacing: 17) {
                                 ForEach(section.tracks) { track in
                                     TrackCardView(track: track)
+                                        .onTapGesture {
+                                            selectedTrack = track
+                                        }
                                 }
                             }
                         }
                     }
                     .padding(.horizontal)
+                }
+                if let selectedTrack {
+                    Text("Selected: \(selectedTrack.title)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal)
                 }
             }
             .padding(.vertical)
