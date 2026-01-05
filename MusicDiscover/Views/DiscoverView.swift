@@ -25,9 +25,9 @@ struct DiscoverView: View {
                                     TrackCardView(track: track)
                                 }
                             }
-                            .padding(.horizontal)
                         }
                     }
+                    .padding(.horizontal)
                 }
             }
             .padding(.vertical)
