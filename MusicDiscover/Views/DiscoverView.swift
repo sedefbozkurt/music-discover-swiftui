@@ -17,9 +17,7 @@ struct DiscoverView: View {
             LazyVStack(alignment: .leading, spacing: 23) {
                 ForEach(sections) { section in
                     VStack(alignment: .leading, spacing: 13) {
-                        Text(section.title)
-                            .font(.title3)
-                            .fontWeight(.semibold)
+                        SectionHeaderView(title: section.title)
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 17) {
@@ -33,12 +31,6 @@ struct DiscoverView: View {
                         }
                     }
                     .padding(.horizontal)
-                }
-                if let selectedTrack {
-                    Text("Selected: \(selectedTrack.title)")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .padding(.horizontal)
                 }
             }
             .padding(.vertical)
