@@ -10,11 +10,19 @@ import Foundation
 struct MockMusicData {
     static let sections: [MusicSection] = [
         MusicSection(
-            title: "Top Picks For You",
+            title: "Top Picks for You",
             tracks: [
                 Track(title: "Fading Lights", artist: "Luna Vale", artworkName: "artwork_1"),
                 Track(title: "Neon Skies", artist: "Echo North", artworkName: "artwork_2"),
                 Track(title: "After Midnight", artist: "Nova Grey", artworkName: "artwork_3")
+            ]
+        ),
+        MusicSection(
+            title: "Rock",
+            tracks: [
+                Track(title: "Midnight Echo", artist: "Stone Avenue", artworkName: "artwork_7"),
+                Track(title: "Burning Skies", artist: "Red Signal", artworkName: "artwork_8"),
+                Track(title: "Silent Riot", artist: "Black Harbor", artworkName: "artwork_9")
             ]
         ),
         MusicSection(
