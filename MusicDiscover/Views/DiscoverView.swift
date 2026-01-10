@@ -29,6 +29,20 @@ struct DiscoverView: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 23) {
+                if !recentlyPlayed.isEmpty {
+                    VStack(alignment: .leading, spacing: 13) {
+                        SectionHeaderView(title: "Recently Played")
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHStack(spacing: 17) {
+                                ForEach(recentlyPlayed) { track in
+                                    TrackCardView(track: track)
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                }
                 ForEach(sections) { section in
                     VStack(alignment: .leading, spacing: 13) {
                         SectionHeaderView(title: section.title)
