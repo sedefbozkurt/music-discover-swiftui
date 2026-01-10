@@ -11,6 +11,20 @@ struct DiscoverView: View {
     let sections = MockMusicData.sections
     
     @State private var selectedTrack: Track? = nil
+    @State private var recentlyPlayed: [Track] = []
+    private let maxRecentlyPlayedCount = 10
+    
+    private func addToRecentlyPlayed(_ track: Track) {
+        guard !recentlyPlayed.contains( where: { $0.id == track.id }) else {
+            return
+        }
+        
+        recentlyPlayed.insert(track, at: 0)
+        
+        if recentlyPlayed.count > maxRecentlyPlayedCount {
+            recentlyPlayed.removeLast()
+        }
+    }
     
     var body: some View {
         ScrollView {
@@ -25,6 +39,7 @@ struct DiscoverView: View {
                                     TrackCardView(track: track)
                                         .onTapGesture {
                                             selectedTrack = track
+                                            addToRecentlyPlayed(track)
                                         }
                                 }
                             }
