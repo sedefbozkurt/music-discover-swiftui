@@ -14,10 +14,16 @@ struct TrackCardView: View {
         VStack(alignment: .leading, spacing: 7) {
             Image(track.artworkName)
                 .resizable()
-                .scaledToFit()
-                .frame(maxWidth: 140, maxHeight: 140)
+                .scaledToFill()
+                .frame(width: 140, height: 140)
                 .clipped()
                 .cornerRadius(13)
+                .shadow(
+                    color: .black.opacity(0.17),
+                    radius: 7,
+                    x: 0,
+                    y: 5
+                )
             
             Text(track.title)
                 .font(.headline)
